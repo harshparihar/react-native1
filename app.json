@@ -1,5 +1,12 @@
 {
   "expo": {
-    "sdkVersion": "27.0.0"
+    "sdkVersion": "27.0.0",
+    "name": "React Native App",
+    "description": "React Native components app",
+    "slug": "react-native-app",
+    "privacy": "public",
+    "versionCode": 1,
+    "icon": "./icon_big",
+    "package": "com.harshparihar.reactnative"
   }
 }
