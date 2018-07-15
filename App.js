@@ -1,48 +1,27 @@
-import React from 'react';
-import Expo from "expo";
-import { StyleSheet, Text, View } from 'react-native';
-import { Container, Header, Title, Button, Left, Right, Body, Icon, Content, Footer } from 'native-base';
+import React, { Component } from 'react';
+import {
+  AppRegistry,
+  StyleSheet,
+  Text,
+  View
+} from 'react-native';
 
-export default class App extends React.Component {
+import allReducers from './src/reducers/index.js';
+import App from './src/App.js';
+import thunk from 'redux-thunk'
+import {createStore, applyMiddleware} from 'redux';
+import {Provider} from 'react-redux';
 
-  constructor(props) {
-    super(props);
-    this.state = { loading: true };
-  }
+const store = createStore(allReducers, applyMiddleware(thunk));
 
-  async componentWillMount() {
-    await Expo.Font.loadAsync({
-      Roboto: require("native-base/Fonts/Roboto.ttf"),
-      Roboto_medium: require("native-base/Fonts/Roboto_medium.ttf"),
-      Ionicons: require("@expo/vector-icons/fonts/Ionicons.ttf"),
-    });
-    this.setState({ loading: false });
-  }
-
+export default class NativeBaseRedux extends Component {
   render() {
-    if (this.state.loading) {
-      return <Expo.AppLoading />;
-    }
-
     return (
-      <Container>
-        <Header />
-        <Content padder>
-          <Text>
-            This is Content Section
-          </Text>
-        </Content>
-        <Footer />
-      </Container>
+      <Provider store= {store}>
+      <App />
+      </Provider>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+AppRegistry.registerComponent('NativeBaseRedux', () => NativeBaseRedux);
