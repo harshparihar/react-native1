@@ -5,8 +5,10 @@
     "description": "React Native components app",
     "slug": "react-native-app",
     "privacy": "public",
-    "versionCode": 1,
-    "icon": "./icon_big",
-    "package": "com.harshparihar.reactnative"
+    "version": "1.0.0",
+    "icon": "./icon_big.png",
+    "android": {
+      "package": "com.harshparihar.reactnative"
+    }
   }
 }
