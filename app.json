@@ -5,10 +5,27 @@
     "description": "React Native components app",
     "slug": "react-native-app",
     "privacy": "public",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "icon": "./icon_big.png",
+    "permissions": [],
     "android": {
-      "package": "com.harshparihar.reactnative"
+      "package": "com.harshparihar.reactnative",
+      "publishBundlePath": "android/app/src/main/assets/shell-app.bundle",
+      "publishManifestPath": "android/app/src/main/assets/shell-app-manifest.json"
+    },
+    "packagerOpts": {
+      "nonPersistent": "--nonPersistent"
+    },
+    "isDetached": true,
+    "detach": {
+      "iosExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/ios-v2.5.10-sdk27.0.0-7e6dd135-e649-48e2-ab7c-e76521ce6259.tar.gz",
+      "androidExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/android-v2.5.3-sdk27.0.0-408c8d77-8d1f-4784-b7b4-93826250663a.tar.gz"
+    },
+    "scheme": "expea6f77c0a55843b8a44ddb912c14e874",
+    "ios": {
+      "bundleIdentifier": "com.harshparihar.reactnative",
+      "publishBundlePath": "ios/react-native-app/Supporting/shell-app.bundle",
+      "publishManifestPath": "ios/react-native-app/Supporting/shell-app-manifest.json"
     }
   }
 }
