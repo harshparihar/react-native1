@@ -20,3 +20,12 @@ yarn-error.log*
 /android/build/*
 
 **/.DS_Store
+
+/android/app/build/
+/android/app/gradle/
+/android/app/gradlew
+/android/app/gradlew.bat
+/build/
+
+/android
+/ios
