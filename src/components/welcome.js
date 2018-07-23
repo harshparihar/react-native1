@@ -29,6 +29,11 @@ class Welcome extends Component {
           <Button dark block onPress= {() =>{ Actions.CampaignList();}} style= {{marginTop: 40}}>
             <Text> Fetch Campaigns </Text>
           </Button>
+
+          <Button dark block onPress= {() =>{ Actions.LoginForm();}} style= {{marginTop: 40}}>
+            <Text> Login Now </Text>
+          </Button>
+
         </Content>
       </Container>
     );
